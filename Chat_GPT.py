@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 SELECT_ACTION, SEND_MESSAGE = range(2)
 
 # OpenAI API Key
-openai.api_key = os.environ[openai]
+openai.api_key = os.environ['OPEN_AI']
 
 # Define the reply keyboard to present the user with options
 reply_keyboard = [['Send Message']]
@@ -62,7 +62,7 @@ conversation_handler = ConversationHandler(
 )
 
 # Get the API Key from the environment
-TELEGRAM_API_KEY = os.environ[telegram_bot]
+TELEGRAM_API_KEY = os.environ['TELEGRAM_BOT']
 
 # Create the Updater and pass it the API Key
 updater = Updater(TELEGRAM_API_KEY, use_context=True)
